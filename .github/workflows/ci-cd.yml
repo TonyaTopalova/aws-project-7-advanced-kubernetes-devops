@@ -24,3 +24,6 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/flask-k8s-app:latest
+              - name: Kubernetes deployment update
+        run: |
+          kubectl rollout restart deployment flask-release-flask-chart

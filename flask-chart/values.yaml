@@ -9,7 +9,7 @@ replicaCount: 2
 image:
   repository: tonyatopalova/flask-k8s-app
   # This sets the pull policy for images.
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
